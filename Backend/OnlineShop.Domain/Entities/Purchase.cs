@@ -8,7 +8,7 @@ public class Purchase
     /// <summary>
     /// Purchase's id.
     /// </summary>
-    public int Id { get; set; }
+    public int Id { get; private set; }
 
     /// <summary>
     /// Amount of product.

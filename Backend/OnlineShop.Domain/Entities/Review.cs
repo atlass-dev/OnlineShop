@@ -10,7 +10,7 @@ public class Review
     /// <summary>
     /// Review's id.
     /// </summary>
-    public int Id { get; set; }
+    public int Id { get; private set; }
 
     /// <summary>
     /// Product's id.
