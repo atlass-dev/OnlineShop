@@ -1,12 +1,12 @@
 ﻿namespace OnlineShop.Domain.Entities;
 
 /// <summary>
-/// Represents a sale of product.
+/// Represents a purchase of product.
 /// </summary>
-public class Sale
+public class Purchase
 {
     /// <summary>
-    /// Sale's id.
+    /// Purchase's id.
     /// </summary>
     public int Id { get; set; }
 
@@ -24,4 +24,14 @@ public class Sale
     /// Product.
     /// </summary>
     public Product? Product { get; set; }
+
+    /// <summary>
+    /// Purchaser's id.
+    /// </summary>
+    public int PurchaserId { get; set; }
+
+    /// <summary>
+    /// Purchaser.
+    /// </summary>
+    public User? Purchaser { get; set; }
 }

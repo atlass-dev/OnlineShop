@@ -45,6 +45,16 @@ public class Product
     required public Category Category { get; set; }
 
     /// <summary>
+    /// Seller's id.
+    /// </summary>
+    required public int SellerId { get; set; }
+
+    /// <summary>
+    /// Seller.
+    /// </summary>
+    public User? Seller { get; set; }
+
+    /// <summary>
     /// Product's creation date.
     /// </summary>
     [Required]
@@ -63,5 +73,5 @@ public class Product
     /// <summary>
     /// Product's sales.
     /// </summary>
-    public IEnumerable<Sale> Sales { get; set; } = new List<Sale>();
+    public IEnumerable<Purchase> Purchases { get; set; } = new List<Purchase>();
 }

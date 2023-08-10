@@ -32,4 +32,14 @@ public class Review
     /// Review's description.
     /// </summary>
     public string Description { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Reviewer's id.
+    /// </summary>
+    public int ReviewerId { get; set; }
+
+    /// <summary>
+    /// Reviewer.
+    /// </summary>
+    public User? Reviewer { get; set; }
 }
