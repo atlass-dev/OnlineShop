@@ -15,4 +15,11 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShop.Infrastructore\OnlineShop.Infrastructore.csproj" />
+    <ProjectReference Include="..\OnlineShop.Infrastructure.Abstractions\OnlineShop.Infrastructure.Abstractions.csproj" />
+    <ProjectReference Include="..\OnlineShop.Infrastructure.DataAccess\OnlineShop.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\OnlineShop.UseCases\OnlineShop.UseCases.csproj" />
+  </ItemGroup>
+
 </Project>
