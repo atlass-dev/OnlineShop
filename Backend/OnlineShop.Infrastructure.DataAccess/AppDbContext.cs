@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using OnlineShop.Domain.Entities;
 using OnlineShop.Infrastructure.Abstractions.Database;
-using System.Reflection.Emit;
 
 namespace OnlineShop.Infrastructure.DataAccess;
 
