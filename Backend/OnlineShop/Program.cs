@@ -1,6 +1,23 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using OnlineShop.Domain.Entities;
+using OnlineShop.Infrastructure.DataAccess;
+using OnlineShop.Infrastructure.Startup;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var databaseConnectionString = builder.Configuration.GetConnectionString("AppDatabase")
+            ?? throw new ArgumentNullException("ConnectionStrings:AppDatabase", "Database connection string is not initialized");
+
 // Add services to the container.
+
+builder.Services.AddIdentity<User, AppIdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddDbContext<AppDbContext>(
+    new DbContextOptionsSetup(databaseConnectionString).Setup);
+builder.Services.AddAsyncInitializer<DatabaseInitializer>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
