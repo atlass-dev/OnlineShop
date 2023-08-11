@@ -6,7 +6,7 @@ namespace OnlineShop.UseCases.Users.CreateUser;
 /// <summary>
 /// Creates user.
 /// </summary>
-public record CreateUserCommand : IRequest<UserDto>
+public record CreateUserCommand : IRequest<int>
 {
     /// <summary>
     /// First name.

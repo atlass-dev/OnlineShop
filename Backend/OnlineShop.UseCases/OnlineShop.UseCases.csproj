@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\OnlineShop.Domain\OnlineShop.Domain.csproj" />
     <ProjectReference Include="..\OnlineShop.Infrastructure.Abstractions\OnlineShop.Infrastructure.Abstractions.csproj" />
+    <ProjectReference Include="..\OnlineShop.Infrastructure.Common\OnlineShop.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\OnlineShop.UseCases.Shared\OnlineShop.UseCases.Shared.csproj" />
   </ItemGroup>
 

@@ -1,30 +1,26 @@
-﻿using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using OnlineShop.Domain.Entities;
 using OnlineShop.Infrastructure.Abstractions.Database;
-using OnlineShop.UseCases.Shared.Users.Dto;
 
 namespace OnlineShop.UseCases.Users.CreateUser;
 
 /// <summary>
 /// Handler for <see cref="CreateUserCommand"/>.
 /// </summary>
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserDto>
+public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
 {
     private readonly IAppDbContext dbContext;
-    private readonly IMapper mapper;
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public CreateUserCommandHandler(IAppDbContext dbContext, IMapper mapper)
+    public CreateUserCommandHandler(IAppDbContext dbContext)
     {
         this.dbContext = dbContext;
-        this.mapper = mapper;
     }
 
     /// <inheritdoc/>
-    public async Task<UserDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
     {
         var user = new User
         {
@@ -36,6 +32,6 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserD
         await dbContext.Users.AddAsync(user, cancellationToken);
         await dbContext.SaveChangesAsync(cancellationToken);
 
-        return mapper.Map<UserDto>(user);
+        return user.Id;
     }
 }
