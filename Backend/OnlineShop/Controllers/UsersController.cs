@@ -30,7 +30,7 @@ public class UsersController : Controller
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>User id.</returns>
     [HttpPost]
-    public async Task<int> Create(CreateUserCommand command, CancellationToken cancellationToken)
+    public async Task<int> CreateUser(CreateUserCommand command, CancellationToken cancellationToken)
         => await mediator.Send(command, cancellationToken);
 
     /// <summary>
