@@ -17,4 +17,8 @@
     <ProjectReference Include="..\OnlineShop.UseCases.Shared\OnlineShop.UseCases.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Reviews\" />
+  </ItemGroup>
+
 </Project>

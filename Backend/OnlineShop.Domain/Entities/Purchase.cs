@@ -28,7 +28,7 @@ public class Purchase
     /// <summary>
     /// Purchaser's id.
     /// </summary>
-    public int PurchaserId { get; set; }
+    required public int PurchaserId { get; set; }
 
     /// <summary>
     /// Purchaser.
