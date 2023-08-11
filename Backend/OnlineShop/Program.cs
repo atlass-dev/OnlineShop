@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OnlineShop.Domain.Entities;
+using OnlineShop.Infrastructure.Abstractions.Database;
 using OnlineShop.Infrastructure.DataAccess;
+using OnlineShop.Infrastructure.DependencyInjection;
 using OnlineShop.Infrastructure.Startup;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,11 @@ builder.Services.AddIdentity<User, AppIdentityRole>()
 builder.Services.AddDbContext<AppDbContext>(
     new DbContextOptionsSetup(databaseConnectionString).Setup);
 builder.Services.AddAsyncInitializer<DatabaseInitializer>();
+
+AutoMapperModule.Register(builder.Services);
+MediatRModule.Register(builder.Services);
+
+builder.Services.AddScoped<IAppDbContext>(s => s.GetRequiredService<AppDbContext>());
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
