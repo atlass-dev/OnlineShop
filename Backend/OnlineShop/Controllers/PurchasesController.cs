@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.UseCases.Purchases.CreatePurchase;
 using OnlineShop.UseCases.Purchases.GetPurchasesByUserId;
@@ -10,6 +11,7 @@ namespace OnlineShop.Controllers;
 /// Purchases controller.
 /// </summary>
 [ApiController]
+[Authorize]
 [Route("api/purchases")]
 public class PurchasesController : ControllerBase
 {

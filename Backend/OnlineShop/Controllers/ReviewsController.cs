@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.UseCases.Reviews.CreateReview;
 using OnlineShop.UseCases.Reviews.GetReviewByProductId;
@@ -42,6 +43,7 @@ public class ReviewsController : ControllerBase
     /// <param name="cancellationToken">Cancelation token.</param>
     /// <returns>Id of created review.</returns>
     [HttpPost]
+    [Authorize]
     [ProducesResponseType(200)]
     public async Task<int> CreateReview(CreateReviewCommand command, CancellationToken cancellationToken)
         => await mediator.Send(command, cancellationToken);

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.UseCases.Products.CreateProduct;
 using OnlineShop.UseCases.Products.GetProductById;
@@ -30,6 +31,7 @@ public class ProductsController : Controller
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>Product id.</returns>
     [HttpPost]
+    [Authorize]
     public async Task<int> CreateProduct(CreateProductCommand command, CancellationToken cancellationToken)
         => await mediator.Send(command, cancellationToken);
 

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using OnlineShop.UseCases.Users.AuthenticateUser;
 using OnlineShop.UseCases.Users.CreateUser;
 
 namespace OnlineShop.Controllers;
