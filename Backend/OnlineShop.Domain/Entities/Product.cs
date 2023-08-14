@@ -36,7 +36,7 @@ public class Product
     /// <summary>
     /// Product's rating.
     /// </summary>
-    public double Rating => Reviews.Average(r => r.Rating);
+    public double Rating => Reviews.Count() > 0 ? Reviews.Average(r => r.Rating) : 0.0;
 
     /// <summary>
     /// Product's category.

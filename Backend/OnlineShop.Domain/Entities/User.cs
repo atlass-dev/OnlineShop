@@ -8,6 +8,16 @@ namespace OnlineShop.Domain.Entities;
 public class User : IdentityUser<int>
 {
     /// <summary>
+    /// User's first name.
+    /// </summary>
+    required public string FirstName { get; init; }
+
+    /// <summary>
+    /// User's last name.
+    /// </summary>
+    required public string LastName { get; init; }
+
+    /// <summary>
     /// Products.
     /// </summary>
     public IEnumerable<Product> Products { get; set; } = new List<Product>();

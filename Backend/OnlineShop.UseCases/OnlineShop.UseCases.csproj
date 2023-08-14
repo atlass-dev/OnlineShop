@@ -6,4 +6,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineShop.Domain\OnlineShop.Domain.csproj" />
+    <ProjectReference Include="..\OnlineShop.Infrastructure.Abstractions\OnlineShop.Infrastructure.Abstractions.csproj" />
+    <ProjectReference Include="..\OnlineShop.Infrastructure.Common\OnlineShop.Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\OnlineShop.UseCases.Shared\OnlineShop.UseCases.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
