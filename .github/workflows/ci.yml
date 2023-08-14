@@ -1,6 +1,8 @@
 name: .NET
 
 on:
+  push:
+    paths: 'Backend/**'
   pull_request:
     branches:
       - develop
