@@ -16,6 +16,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Backend/OnlineShop
 
     steps:
     - uses: actions/checkout@v3
@@ -25,7 +28,6 @@ jobs:
         dotnet-version: 7.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: Backend/OnlineShop
     - name: Build
       run: dotnet build --no-restore
     - name: Test
