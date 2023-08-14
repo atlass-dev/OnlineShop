@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using OnlineShop.UseCases.Shared.Users.Dto;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineShop.UseCases.Users.CreateUser;
 
@@ -21,5 +21,13 @@ public record CreateUserCommand : IRequest<int>
     /// <summary>
     /// Email.
     /// </summary>
+    [EmailAddress]
+    [DataType(DataType.EmailAddress)]
     required public string Email { get; init; }
+
+    /// <summary>
+    /// Password.
+    /// </summary>
+    [DataType(DataType.Password)]
+    required public string Password { get; init; }
 }

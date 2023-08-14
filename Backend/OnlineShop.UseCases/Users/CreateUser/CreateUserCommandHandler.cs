@@ -1,6 +1,7 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Identity;
 using OnlineShop.Domain.Entities;
-using OnlineShop.Infrastructure.Abstractions.Database;
+using OnlineShop.Infrastructure.Common.Exceptions;
 
 namespace OnlineShop.UseCases.Users.CreateUser;
 
@@ -9,14 +10,14 @@ namespace OnlineShop.UseCases.Users.CreateUser;
 /// </summary>
 internal class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
 {
-    private readonly IAppDbContext dbContext;
+    private readonly UserManager<User> userManager;
 
     /// <summary>
     /// Constructor.
     /// </summary>
-    public CreateUserCommandHandler(IAppDbContext dbContext)
+    public CreateUserCommandHandler(UserManager<User> userManager)
     {
-        this.dbContext = dbContext;
+        this.userManager = userManager;
     }
 
     /// <inheritdoc/>
@@ -26,11 +27,16 @@ internal class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int
         {
             FirstName = request.FirstName,
             LastName = request.LastName,
-            Email = request.Email
+            Email = request.Email,
+            UserName = request.Email
         };
 
-        await dbContext.Users.AddAsync(user, cancellationToken);
-        await dbContext.SaveChangesAsync(cancellationToken);
+        var result = await userManager.CreateAsync(user, request.Password);
+        
+        if (!result.Succeeded)
+        {
+            throw new DomainException($"Failed to create user with email {request.Email}");
+        }
 
         return user.Id;
     }

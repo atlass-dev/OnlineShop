@@ -24,16 +24,6 @@ public class UsersController : Controller
     }
 
     /// <summary>
-    /// Creates user.
-    /// </summary>
-    /// <param name="command">Command.</param>
-    /// <param name="cancellationToken">Cancellation token.</param>
-    /// <returns>User id.</returns>
-    [HttpPost]
-    public async Task<int> CreateUser(CreateUserCommand command, CancellationToken cancellationToken)
-        => await mediator.Send(command, cancellationToken);
-
-    /// <summary>
     /// Gets user by id.
     /// </summary>
     /// <param name="request">Request.</param>
