@@ -27,7 +27,8 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, P
     /// <inheritdoc/>
     public async Task<ProductDto> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
     {
-        var product = await dbContext.Products.FirstOrDefaultAsync(p => p.Id == request.Id, cancellationToken);
+        var product = await dbContext.Products
+            .FirstOrDefaultAsync(p => p.Id == request.Id, cancellationToken);
 
         if (product == null)
         {

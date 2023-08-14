@@ -47,14 +47,4 @@ public record ProductDto
     /// Created at.
     /// </summary>
     public DateTime CreatedAt { get; init; }
-
-    /// <summary>
-    /// Reviews.
-    /// </summary>
-    public IEnumerable<ReviewDto> Reviews { get; init; } = new List<ReviewDto>();
-
-    /// <summary>
-    /// Purchases.
-    /// </summary>
-    public IEnumerable<PurchaseDto> Purchases { get; init; } = new List<PurchaseDto>();
 }
