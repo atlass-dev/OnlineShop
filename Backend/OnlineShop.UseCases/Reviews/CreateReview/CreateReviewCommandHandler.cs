@@ -7,7 +7,7 @@ namespace OnlineShop.UseCases.Reviews.CreateReview;
 /// <summary>
 /// Handler for <see cref="CreateReviewCommand"/>.
 /// </summary>
-public class CreateReviewCommandHandler : IRequestHandler<CreateReviewCommand, int>
+internal class CreateReviewCommandHandler : IRequestHandler<CreateReviewCommand, int>
 {
     private readonly IAppDbContext dbContext;
 

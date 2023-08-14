@@ -5,7 +5,7 @@ using OnlineShop.Infrastructure.Abstractions.Database;
 namespace OnlineShop.UseCases.Products.CreateProduct;
 
 /// Handler for <see cref="CreateProductCommand"/>.
-public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
+internal class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
 {
     private readonly IAppDbContext dbContext;
 

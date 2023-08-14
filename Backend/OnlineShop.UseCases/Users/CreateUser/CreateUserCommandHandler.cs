@@ -7,7 +7,7 @@ namespace OnlineShop.UseCases.Users.CreateUser;
 /// <summary>
 /// Handler for <see cref="CreateUserCommand"/>.
 /// </summary>
-public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
+internal class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
 {
     private readonly IAppDbContext dbContext;
 

@@ -7,7 +7,7 @@ namespace OnlineShop.UseCases.Purchases.CreatePurchase;
 /// <summary>
 /// Handler for <see cref="CreatePurchaseCommand"/>.
 /// </summary>
-public class CreatePurchaseCommandHandler : IRequestHandler<CreatePurchaseCommand, int>
+internal class CreatePurchaseCommandHandler : IRequestHandler<CreatePurchaseCommand, int>
 {
     private readonly IAppDbContext dbContext;
 

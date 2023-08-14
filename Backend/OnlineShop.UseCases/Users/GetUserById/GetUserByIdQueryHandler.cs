@@ -10,7 +10,7 @@ namespace OnlineShop.UseCases.Users.GetUserById;
 /// <summary>
 /// Handler for <see cref="GetUserByIdQuery"/>.
 /// </summary>
-public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto>
+internal class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto>
 {
     private readonly IAppDbContext dbContext;
     private readonly IMapper mapper;

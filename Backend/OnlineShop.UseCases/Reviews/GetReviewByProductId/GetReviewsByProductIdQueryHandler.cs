@@ -10,7 +10,7 @@ namespace OnlineShop.UseCases.Reviews.GetReviewByProductId;
 /// <summary>
 /// Handler for <see cref="GetReviewsByProductIdQuery"/>.
 /// </summary>
-public class GetReviewsByProductIdQueryHandler : IRequestHandler<GetReviewsByProductIdQuery, IReadOnlyCollection<ReviewDto>>
+internal class GetReviewsByProductIdQueryHandler : IRequestHandler<GetReviewsByProductIdQuery, IReadOnlyCollection<ReviewDto>>
 {
     private readonly IAppDbContext dbContext;
     private readonly IMapper mapper;
