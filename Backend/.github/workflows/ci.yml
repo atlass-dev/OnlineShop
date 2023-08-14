@@ -6,8 +6,12 @@ name: .NET
 on:
   push:
     branches: [ "master" ]
+    paths: 'Backend/**'
   pull_request:
     branches: [ "master" ]
+    
+
+  workflow_dispatch:
 
 jobs:
   build:
