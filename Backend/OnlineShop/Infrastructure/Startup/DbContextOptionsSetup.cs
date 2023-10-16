@@ -25,7 +25,7 @@ internal class DbContextOptionsSetup
     /// <param name="options">Options.</param>
     public void Setup(DbContextOptionsBuilder options)
     {
-        options.UseSqlServer(connectionString,
+        options.UseNpgsql(connectionString,
             opt => opt.MigrationsAssembly(typeof(AppDbContext).Assembly.GetName().Name));
     }
 }

@@ -5,19 +5,21 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop", "OnlineShop\OnlineShop.csproj", "{E9EE57B9-D0D2-43FC-8B39-EAD0C2C7114F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Domain", "OnlineShop.Domain\OnlineShop.Domain.csproj", "{3BFDD131-DB09-47BF-BED9-CC7BB0AD8A30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Domain", "OnlineShop.Domain\OnlineShop.Domain.csproj", "{3BFDD131-DB09-47BF-BED9-CC7BB0AD8A30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Infrastructure.Abstractions", "OnlineShop.Infrastructure.Abstractions\OnlineShop.Infrastructure.Abstractions.csproj", "{FB3499CD-5ECA-4F3C-88D6-EA085A046507}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Infrastructure.Abstractions", "OnlineShop.Infrastructure.Abstractions\OnlineShop.Infrastructure.Abstractions.csproj", "{FB3499CD-5ECA-4F3C-88D6-EA085A046507}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Infrastructore", "OnlineShop.Infrastructore\OnlineShop.Infrastructore.csproj", "{762BB6A8-4354-4F4F-AA77-21178DA34DC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Infrastructore", "OnlineShop.Infrastructore\OnlineShop.Infrastructore.csproj", "{762BB6A8-4354-4F4F-AA77-21178DA34DC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Infrastructure.DataAccess", "OnlineShop.Infrastructure.DataAccess\OnlineShop.Infrastructure.DataAccess.csproj", "{7C153B31-28FA-44A9-8D19-E8C62A6412CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Infrastructure.DataAccess", "OnlineShop.Infrastructure.DataAccess\OnlineShop.Infrastructure.DataAccess.csproj", "{7C153B31-28FA-44A9-8D19-E8C62A6412CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.UseCases", "OnlineShop.UseCases\OnlineShop.UseCases.csproj", "{F360F5FD-18BB-4708-B7C5-5604C7587377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.UseCases", "OnlineShop.UseCases\OnlineShop.UseCases.csproj", "{F360F5FD-18BB-4708-B7C5-5604C7587377}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.UseCases.Shared", "OnlineShop.UseCases.Shared\OnlineShop.UseCases.Shared.csproj", "{4A71E6BB-5EA0-4BA2-80C9-E276C493D98A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.UseCases.Shared", "OnlineShop.UseCases.Shared\OnlineShop.UseCases.Shared.csproj", "{4A71E6BB-5EA0-4BA2-80C9-E276C493D98A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop.Infrastructure.Common", "OnlineShop.Infrastructure.Common\OnlineShop.Infrastructure.Common.csproj", "{258CA26C-5B75-4115-A92B-C3ECBE29BC57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop.Infrastructure.Common", "OnlineShop.Infrastructure.Common\OnlineShop.Infrastructure.Common.csproj", "{258CA26C-5B75-4115-A92B-C3ECBE29BC57}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1600AA14-DE88-4058-AFD8-C50E8F9975B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{258CA26C-5B75-4115-A92B-C3ECBE29BC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{258CA26C-5B75-4115-A92B-C3ECBE29BC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{258CA26C-5B75-4115-A92B-C3ECBE29BC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1600AA14-DE88-4058-AFD8-C50E8F9975B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1600AA14-DE88-4058-AFD8-C50E8F9975B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1600AA14-DE88-4058-AFD8-C50E8F9975B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1600AA14-DE88-4058-AFD8-C50E8F9975B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
