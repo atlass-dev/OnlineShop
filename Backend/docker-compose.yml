@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  app_db:
+    image: postgres
+    container_name: app_db
+    ports:
+      - 5436:5432
+    environment:
+      - POSTGRES_USER=postgres 
+      - POSTGRES_PASSWORD=123
+    restart: always
+
+  onlineshop:
+    image: ${DOCKER_REGISTRY-}onlineshop
+    depends_on: 
+      - "app_db"
+    container_name: "trusting_agnesi"
+    ports:
+      - "8081:80"
+    build:
+      context: .
+      dockerfile: OnlineShop/Dockerfile
+    environment:
+      - ConnectionStrings__AppDatabase=Host=app_db;Port=5432;Database=online-shop;Uid=postgres;Pwd=123;
+      - ASPNETCORE_URLS=http://+:80
